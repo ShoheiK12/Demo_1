@@ -320,7 +320,73 @@ COMPANY
 }
 
 /*-------------------------------------------
-フッター
+CONTACT
+-------------------------------------------*/
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+
+.contact-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.contact-wrapper {
+  max-width: 600px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.submit-btn {
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}
+
+/*-------------------------------------------
+FOOTER
 -------------------------------------------*/
 /*
 「position: absolute;」を設定して、フッター位置を画面下に設定
