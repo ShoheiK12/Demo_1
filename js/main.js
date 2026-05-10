@@ -1,25 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', async() => {
   /*=================================================
-  ハンバーガーメニュー
-  ===================================================*/
-  const header = document.getElementById('header');
-  const toggleBtn = document.querySelector('.toggle_btn');
-  const mask = document.getElementById('mask');
-
-  // メニュー開閉
-  toggleBtn.addEventListener('click', () => {
-    header.classList.toggle('open');
-  });
-
-  // 背景クリックで閉じる
-  mask.addEventListener('click', () => {
-    header.classList.remove('open');
-  });
-
-
-  /*=================================================
-  Swiper
+  Initialise Swiper
   ===================================================*/
   const swiper = new Swiper(".swiper", {
 
@@ -43,4 +24,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
+  
+  /*=================================================
+  Generate Product List
+  ===================================================*/
+  const response = await fetch('./products.json');
+
+  const products = await response.json();
+
+  const productList = document.querySelector('.product-list');
+
+  products.forEach(product => {
+
+    const li = document.createElement('li');
+
+    li.innerHTML = `
+      <a href="item.html?id=${product.id}">
+        <img src="${product.image}" alt="">
+        <p>${product.title}</p>
+        <p>${product.price}</p>
+      </a>
+    `;
+
+    productList.appendChild(li);
+  
+  });
 });

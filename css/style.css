@@ -271,6 +271,33 @@ text-align: justify;
 }
 
 /*-------------------------------------------
+Item.html
+-------------------------------------------*/
+.item-image img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.item-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.item-info h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.item-info p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/*-------------------------------------------
 ABOUT
 -------------------------------------------*/
 #about {
@@ -309,10 +336,10 @@ COMPANY
   border-bottom: none;
 }
 #company .map {
-  /* グーグルマップをグレースケールにする */
+  /* Make Google greyscale */
   filter: grayscale(1);
 }
-/* グーグルマップのサイズを設定 */
+/* Set up Google map size */
 #company .map iframe {
   width: 100%;
   height: 300px;
